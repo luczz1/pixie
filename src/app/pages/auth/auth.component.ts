@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/providers/endpoints/auth.service';
 
 @Component({
@@ -8,17 +9,20 @@ import { AuthService } from 'src/providers/endpoints/auth.service';
 })
 export class AuthComponent {
 
-  public signup = true;
+  public signup = false;
 
   public login = {
     name: '',
     password: ''
   };
 
-  constructor(private auth: AuthService) { }
+  constructor(private auth: AuthService, private router: Router) { }
 
   public fnLogin() {
     console.log('logou');
+
+    localStorage.setItem('user', JSON.stringify({user: 'Teste'}));
+    this.router.navigateByUrl('')
   }
 
 }

@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MenuPage } from './menu.page';
+import { TopPage } from './top.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: MenuPage,
+    component: TopPage,
     children: [
       {
-        path: 'quiz',
+        path: 'schedule',
         loadChildren: () =>
-          import('../quiz/quiz.module').then(
-            (m) => m.QuizPageModule
+          import('../schedule/schedule.module').then(
+            (m) => m.SchedulePageModule
           ),
       },
       {
         path: '',
-        redirectTo: `home`,
+        redirectTo: `schedule`,
         pathMatch: 'full'
       },
     ],
@@ -27,4 +27,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class MenuPageRoutingModule {}
+export class TopPageRoutingModule {}

@@ -9,6 +9,11 @@ const routes: Routes = [
     canActivate: [RouterGuard]
   },
   {
+    path: '',
+    loadChildren: () => import('./pages/top/top.module').then(m => m.TopPageModule),
+    canActivate: [RouterGuard]
+  },
+  {
     path: 'login',
     loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthPageModule),
   },

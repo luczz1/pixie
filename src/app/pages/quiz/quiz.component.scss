@@ -1,0 +1,30 @@
+.menu {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+ion-progress-bar {
+  height: 34px;
+  margin-top: 1.5em;
+}
+
+ion-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+ion-button {
+  --background: #f1f1f1;
+  --color: var(--ion-color-primary);
+  --box-shadow: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-radius: 10px;
+  height: 51px;
+  margin: .3em;
+}
+
+ion-grid {
+  margin-top: 4em;
+}
